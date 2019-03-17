@@ -12,6 +12,6 @@
     "minimum-stability": "dev",
     "require": {
         "rixafy/blog": "dev-master",
-        "nette/di": "^3.0@dev"
+        "nette/di": "^2.4"
     }
 }
