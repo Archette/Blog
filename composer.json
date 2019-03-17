@@ -1,0 +1,16 @@
+{
+    "name": "archette/blog",
+    "description": "Implementation of rixafy/blog to Nette framework",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rixafy",
+            "email": "rixafy@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "rixafy/blog": "dev-master"
+    }
+}
