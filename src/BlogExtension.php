@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\TestExtension;
+namespace Archette\Blog;
 
 class BlogExtension extends \Nette\DI\CompilerExtension
 {
