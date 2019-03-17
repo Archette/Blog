@@ -1,0 +1,6 @@
+extensions:
+    archette.blog: Archette\Blog\BlogExtension
+
+orm.annotations:
+    paths:
+        - vendor/rixafy/blog
