@@ -13,5 +13,15 @@
     "require": {
         "rixafy/blog": "dev-master",
         "nette/di": "^2.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Archette\\Blog\\": "src"
+        }
+    },
+    "config": {
+        "platform": {
+            "php": "7.1"
+        }
     }
 }
