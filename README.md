@@ -1,6 +1,11 @@
 # Blog
 📝 CRUD model rixafy/blog ported to @nette framework.
 
+# Installation
+```
+composer require archette/blog
+```
+
 # Basic usage
 
 Add configuration to your boot file before your main config (propably config.neon).
