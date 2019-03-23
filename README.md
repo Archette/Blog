@@ -8,9 +8,10 @@ composer require archette/blog
 
 # Basic usage
 
-Add configuration to your boot file before your main config (propably config.neon).
-```PHP
-$configurator->addConfig(__DIR__ . '/../vendor/archette/blog/config/config.neon');
+Add extension to your neon configuration
+```neon
+extensions:
+    archette.blog: Archette\Blog\BlogExtension
 ```
 
 Then you will have injected all services in DI, advanced blog configuration will be released soon (posts per page configuration, etc)
