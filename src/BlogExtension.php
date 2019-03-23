@@ -27,40 +27,40 @@ class BlogExtension extends \Nette\DI\CompilerExtension
 
     public function loadConfiguration()
     {
-        $this->getContainerBuilder()->addDefinition($this->prefix('blogFacade'))
+        $this->getContainerBuilder()->addDefinition($this->prefix('rixafy.blogFacade'))
             ->setFactory(BlogFacade::class);
 
-        $this->getContainerBuilder()->addDefinition($this->prefix('blogPostFacade'))
+        $this->getContainerBuilder()->addDefinition($this->prefix('rixafy.blogPostFacade'))
             ->setFactory(BlogPostFacade::class);
 
-        $this->getContainerBuilder()->addDefinition($this->prefix('blogTagFacade'))
+        $this->getContainerBuilder()->addDefinition($this->prefix('rixafy.blogTagFacade'))
             ->setFactory(BlogTagFacade::class);
 
-        $this->getContainerBuilder()->addDefinition($this->prefix('blogPublisherFacade'))
+        $this->getContainerBuilder()->addDefinition($this->prefix('rixafy.blogPublisherFacade'))
             ->setFactory(BlogPublisherFacade::class);
 
-        $this->getContainerBuilder()->addDefinition($this->prefix('blogCategoryFacade'))
+        $this->getContainerBuilder()->addDefinition($this->prefix('rixafy.blogCategoryFacade'))
             ->setFactory(BlogCategoryFacade::class);
 
-        $this->getContainerBuilder()->addDefinition($this->prefix('blogFactory'))
+        $this->getContainerBuilder()->addDefinition($this->prefix('rixafy.blogFactory'))
             ->setFactory(BlogFactory::class);
 
-        $this->getContainerBuilder()->addDefinition($this->prefix('blogDataFactory'))
+        $this->getContainerBuilder()->addDefinition($this->prefix('rixafy.blogDataFactory'))
             ->setFactory(BlogDataFactory::class);
 
-        $this->getContainerBuilder()->addDefinition($this->prefix('blogRepository'))
+        $this->getContainerBuilder()->addDefinition($this->prefix('rixafy.blogRepository'))
             ->setFactory(BlogRepository::class);
 
-        $this->getContainerBuilder()->addDefinition($this->prefix('blogPostRepository'))
+        $this->getContainerBuilder()->addDefinition($this->prefix('rixafy.blogPostRepository'))
             ->setFactory(BlogPostRepository::class);
 
-        $this->getContainerBuilder()->addDefinition($this->prefix('blogTagRepository'))
+        $this->getContainerBuilder()->addDefinition($this->prefix('rixafy.blogTagRepository'))
             ->setFactory(BlogTagRepository::class);
 
-        $this->getContainerBuilder()->addDefinition($this->prefix('blogPublisherRepository'))
+        $this->getContainerBuilder()->addDefinition($this->prefix('rixafy.blogPublisherRepository'))
             ->setFactory(BlogPublisherRepository::class);
 
-        $this->getContainerBuilder()->addDefinition($this->prefix('blogCategoryRepository'))
+        $this->getContainerBuilder()->addDefinition($this->prefix('rixafy.blogCategoryRepository'))
             ->setFactory(BlogCategoryRepository::class);
     }
 }
