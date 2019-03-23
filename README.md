@@ -1,5 +1,5 @@
 # Blog
-📝 CRUD model rixafy/blog ported to @nette framework.
+📝 CRUD model rixafy/blog ported to Nette Framework.
 
 # Installation
 ```
@@ -20,4 +20,4 @@ It's recommended to use only Rixafy\Blog\BlogFacade in DI, but if you have impor
 
 # Important
 
-This extension requires implementation Doctrine ORM in nette - https://github.com/nettrine/orm and you must have configured annotation as described in https://github.com/nettrine/orm/blob/master/.docs/README.md#minimal-configuration becasue blog will add ORM path to 'orm.annotations' config key.
+This extension requires implementation Doctrine ORM in Nette Framework - https://github.com/nettrine/orm.
