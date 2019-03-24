@@ -1,5 +1,5 @@
 # Blog
-📝 CRUD model rixafy/blog ported to Nette Framework.
+📝 CRUD model [rixafy/blog](https://github.com/Rixafy/Blog) ported to Nette Framework.
 
 # Installation
 ```
