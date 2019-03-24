@@ -6,8 +6,6 @@
 composer require archette/blog
 ```
 
-# Basic usage
-
 Add extension to your neon configuration
 ```neon
 extensions:
