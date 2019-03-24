@@ -18,4 +18,6 @@ It's recommended to use only Rixafy\Blog\BlogFacade in DI, but if you have impor
 
 # Important
 
-This extension requires implementation Doctrine ORM in Nette Framework - https://github.com/nettrine/orm.
+Extension requires implementation of Doctrine ORM in Nette Framework - https://github.com/nettrine/orm.
+
+Extension requires implementation of symfony/console in Nette Framework - https://github.com/contributte/console
