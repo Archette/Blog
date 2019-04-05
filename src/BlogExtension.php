@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Archette\Blog;
 
+use Doctrine\Common\Persistence\Mapping\Driver\AnnotationDriver;
+use Nette\DI\CompilerExtension;
 use Rixafy\Blog\BlogCategory\BlogCategoryFacade;
 use Rixafy\Blog\BlogCategory\BlogCategoryRepository;
 use Rixafy\Blog\BlogDataFactory;
@@ -17,11 +19,11 @@ use Rixafy\Blog\BlogRepository;
 use Rixafy\Blog\BlogTag\BlogTagFacade;
 use Rixafy\Blog\BlogTag\BlogTagRepository;
 
-class BlogExtension extends \Nette\DI\CompilerExtension
+class BlogExtension extends CompilerExtension
 {
     public function beforeCompile()
     {
-        $this->getContainerBuilder()->getDefinitionByType(\Doctrine\Common\Persistence\Mapping\Driver\AnnotationDriver::class)
+        $this->getContainerBuilder()->getDefinitionByType(AnnotationDriver::class)
             ->addSetup('addPaths', [['vendor/rixafy/blog']]);
     }
 
