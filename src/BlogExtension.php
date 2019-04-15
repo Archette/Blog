@@ -6,25 +6,26 @@ namespace Archette\Blog;
 
 use Doctrine\Common\Persistence\Mapping\Driver\AnnotationDriver;
 use Nette\DI\CompilerExtension;
-use Rixafy\Blog\BlogCategory\BlogCategoryFacade;
-use Rixafy\Blog\BlogCategory\BlogCategoryRepository;
-use Rixafy\Blog\BlogDataFactory;
+use Nette\DI\ServiceDefinition;
+use Rixafy\Blog\Category\BlogCategoryFacade;
+use Rixafy\Blog\Category\BlogCategoryRepository;
 use Rixafy\Blog\BlogFacade;
 use Rixafy\Blog\BlogFactory;
-use Rixafy\Blog\BlogPost\BlogPostFacade;
-use Rixafy\Blog\BlogPost\BlogPostRepository;
-use Rixafy\Blog\BlogPublisher\BlogPublisherFacade;
-use Rixafy\Blog\BlogPublisher\BlogPublisherRepository;
+use Rixafy\Blog\Post\BlogPostFacade;
+use Rixafy\Blog\Post\BlogPostRepository;
+use Rixafy\Blog\Publisher\BlogPublisherFacade;
+use Rixafy\Blog\Publisher\BlogPublisherRepository;
 use Rixafy\Blog\BlogRepository;
-use Rixafy\Blog\BlogTag\BlogTagFacade;
-use Rixafy\Blog\BlogTag\BlogTagRepository;
+use Rixafy\Blog\Tag\BlogTagFacade;
+use Rixafy\Blog\Tag\BlogTagRepository;
 
 class BlogExtension extends CompilerExtension
 {
     public function beforeCompile()
     {
-        $this->getContainerBuilder()->getDefinitionByType(AnnotationDriver::class)
-            ->addSetup('addPaths', [['vendor/rixafy/blog']]);
+    	/** @var ServiceDefinition $serviceDefinition */
+    	$serviceDefinition = $this->getContainerBuilder()->getDefinitionByType(AnnotationDriver::class);
+        $serviceDefinition->addSetup('addPaths', [['vendor/rixafy/blog']]);
     }
 
     public function loadConfiguration()
@@ -46,9 +47,6 @@ class BlogExtension extends CompilerExtension
 
         $this->getContainerBuilder()->addDefinition($this->prefix('blogFactory'))
             ->setFactory(BlogFactory::class);
-
-        $this->getContainerBuilder()->addDefinition($this->prefix('blogDataFactory'))
-            ->setFactory(BlogDataFactory::class);
 
         $this->getContainerBuilder()->addDefinition($this->prefix('blogRepository'))
             ->setFactory(BlogRepository::class);
