@@ -6,7 +6,7 @@ namespace Archette\Blog;
 
 use Doctrine\Common\Persistence\Mapping\Driver\AnnotationDriver;
 use Nette\DI\CompilerExtension;
-use Nette\DI\ServiceDefinition;
+use Nette\DI\Definitions\ServiceDefinition;
 use Rixafy\Blog\Category\BlogCategoryFacade;
 use Rixafy\Blog\Category\BlogCategoryRepository;
 use Rixafy\Blog\BlogFacade;
