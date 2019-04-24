@@ -14,6 +14,7 @@ use Rixafy\Blog\BlogFactory;
 use Rixafy\Blog\Post\BlogPostFacade;
 use Rixafy\Blog\Post\BlogPostRepository;
 use Rixafy\Blog\Publisher\BlogPublisherFacade;
+use Rixafy\Blog\Publisher\BlogPublisherFactory;
 use Rixafy\Blog\Publisher\BlogPublisherRepository;
 use Rixafy\Blog\BlogRepository;
 use Rixafy\Blog\Tag\BlogTagFacade;
@@ -47,6 +48,9 @@ class BlogExtension extends CompilerExtension
 
         $this->getContainerBuilder()->addDefinition($this->prefix('blogFactory'))
             ->setFactory(BlogFactory::class);
+
+        $this->getContainerBuilder()->addDefinition($this->prefix('blogPublisherFactory'))
+            ->setFactory(BlogPublisherFactory::class);
 
         $this->getContainerBuilder()->addDefinition($this->prefix('blogRepository'))
             ->setFactory(BlogRepository::class);
