@@ -8,16 +8,19 @@ use Doctrine\Common\Persistence\Mapping\Driver\AnnotationDriver;
 use Nette\DI\CompilerExtension;
 use Nette\DI\Definitions\ServiceDefinition;
 use Rixafy\Blog\Category\BlogCategoryFacade;
+use Rixafy\Blog\Category\BlogCategoryFactory;
 use Rixafy\Blog\Category\BlogCategoryRepository;
 use Rixafy\Blog\BlogFacade;
 use Rixafy\Blog\BlogFactory;
 use Rixafy\Blog\Post\BlogPostFacade;
+use Rixafy\Blog\Post\BlogPostFactory;
 use Rixafy\Blog\Post\BlogPostRepository;
 use Rixafy\Blog\Publisher\BlogPublisherFacade;
 use Rixafy\Blog\Publisher\BlogPublisherFactory;
 use Rixafy\Blog\Publisher\BlogPublisherRepository;
 use Rixafy\Blog\BlogRepository;
 use Rixafy\Blog\Tag\BlogTagFacade;
+use Rixafy\Blog\Tag\BlogTagFactory;
 use Rixafy\Blog\Tag\BlogTagRepository;
 
 class BlogExtension extends CompilerExtension
@@ -51,6 +54,15 @@ class BlogExtension extends CompilerExtension
 
         $this->getContainerBuilder()->addDefinition($this->prefix('blogPublisherFactory'))
             ->setFactory(BlogPublisherFactory::class);
+
+        $this->getContainerBuilder()->addDefinition($this->prefix('blogCategoryFactory'))
+            ->setFactory(BlogCategoryFactory::class);
+
+        $this->getContainerBuilder()->addDefinition($this->prefix('blogTagFactory'))
+            ->setFactory(BlogTagFactory::class);
+
+        $this->getContainerBuilder()->addDefinition($this->prefix('blogPostFactory'))
+            ->setFactory(BlogPostFactory::class);
 
         $this->getContainerBuilder()->addDefinition($this->prefix('blogRepository'))
             ->setFactory(BlogRepository::class);
