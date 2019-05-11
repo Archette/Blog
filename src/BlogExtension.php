@@ -25,14 +25,14 @@ use Rixafy\Blog\Tag\BlogTagRepository;
 
 class BlogExtension extends CompilerExtension
 {
-    public function beforeCompile()
+    public function beforeCompile(): void
     {
     	/** @var ServiceDefinition $serviceDefinition */
     	$serviceDefinition = $this->getContainerBuilder()->getDefinitionByType(AnnotationDriver::class);
         $serviceDefinition->addSetup('addPaths', [['vendor/rixafy/blog']]);
     }
 
-    public function loadConfiguration()
+    public function loadConfiguration(): void
     {
         $this->getContainerBuilder()->addDefinition($this->prefix('blogFacade'))
             ->setFactory(BlogFacade::class);
